@@ -1,0 +1,23 @@
+{
+  "name": "whirlpool27.github.io",
+  "version": "1.0.0",
+  "description": "Portofolio website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whirlpool27/whirlpool27.github.io.git"
+  },
+  "author": "Gilang Anggara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whirlpool27/whirlpool27.github.io/issues"
+  },
+  "homepage": "https://github.com/whirlpool27/whirlpool27.github.io#readme",
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
