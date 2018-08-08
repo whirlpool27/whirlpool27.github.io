@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/whirlpool27/whirlpool27.github.io#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.2.0",
     "node-sass": "^4.9.2"
   }
 }
