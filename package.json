@@ -4,8 +4,8 @@
   "description": "Portofolio website",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploy": "gh-pages -d dist"
+    "build": "node-sass scss/ -o dist/css",
+    "watch": "node-sass -w scss/ -o dist/css/"
   },
   "repository": {
     "type": "git",

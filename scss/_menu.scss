@@ -63,7 +63,7 @@
     padding: 0;
     background: darken($primary-color, 5);
     list-style: none;
-    transform: translate3d(0, 100, 0);
+    transform: translate3d(0, -100%, 0);
     @include easeOut;
 
     &.show {
@@ -83,7 +83,7 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background: url("../img/Satisfied-Seal.jpg");
+      background: url('../img/Satisfied-Seal.jpg');
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }
