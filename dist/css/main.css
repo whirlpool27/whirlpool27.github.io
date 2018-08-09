@@ -24,7 +24,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -40,14 +39,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: rgba(55, 55, 55, 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: rgba(68, 68, 68, 0.9);
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -55,7 +54,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("../img/Satisfied-Seal.jpg");
+      background: url("../img/portrait_small.jpg");
       border-radius: 50%;
       border: solid 3px #eece1a; }
   .menu .nav-item {
@@ -101,10 +100,10 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/Satisfied-Seal.jpg);
+    background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
-    body#bg-img::after {
+    body#bg-img:after {
       content: '';
       position: absolute;
       top: 0;
@@ -137,7 +136,7 @@ a {
 header {
   position: fixed;
   z-index: 2;
-  widows: 100%; }
+  width: 100%; }
 
 .text-secondary {
   color: #eece1a; }
@@ -183,8 +182,8 @@ main {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.7rem; }
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
     border: 3px #fff solid; }
@@ -202,7 +201,7 @@ main {
   .boxes div {
     font-size: 2rem;
     border: 3px #fff solid;
-    padding: 1.5rem 2.5;
+    padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     transition: all 0.5s ease-out; }
     .boxes div:hover {

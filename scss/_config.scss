@@ -1,7 +1,7 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url(../img/Satisfied-Seal.jpg);
+$home-image: url(../img/background.jpg);
 $background-opacity: 0.8;
 
 @mixin easeOut {
@@ -14,7 +14,7 @@ $background-opacity: 0.8;
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
-      &::after {
+      &:after {
         content: '';
         position: absolute;
         top: 0;

@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/whirlpool27/whirlpool27.github.io/issues"
   },
-  "homepage": "https://github.com/whirlpool27/whirlpool27.github.io#readme",
+  "homepage": "https://github.com/whirlpool27/whirlpool27.github.io",
   "dependencies": {
     "node-sass": "^4.9.2"
   }
