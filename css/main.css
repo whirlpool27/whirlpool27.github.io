@@ -54,7 +54,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("../img/portrait_small.jpg");
+      background: url("../img/portrait.jpg");
       border-radius: 50%;
       border: solid 3px #eece1a; }
   .menu .nav-item {
@@ -145,7 +145,8 @@ main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    font-family: fontawesome; }
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
@@ -249,7 +250,8 @@ main {
     text-align: center; }
     main .lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      font-size: 4rem; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -273,7 +275,13 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .boxes div {
+    font-size: 1.5rem;
+    padding: 1.25rem 2.25rem;
+    margin-bottom: 2.5rem; }
+    .boxes div:hover {
+      padding: 0.4rem 1.25rem; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -282,6 +290,12 @@ main {
       margin-top: 10vh; }
     main .lg-heading {
       margin-top: 1rem;
-      font-size: 5rem; }
+      font-size: 3rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .boxes div {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem; }
+    .boxes div:hover {
+      padding: 0.25rem 1rem; } }
