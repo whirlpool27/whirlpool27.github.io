@@ -4,8 +4,8 @@
   "description": "Portofolio website",
   "main": "index.js",
   "scripts": {
-    "build": "node-sass scss/ -o dist/css",
-    "watch": "node-sass -w scss/ -o dist/css/"
+    "build": "node-sass scss/ -o css/",
+    "watch": "node-sass -w scss/ -o css/"
   },
   "repository": {
     "type": "git",
