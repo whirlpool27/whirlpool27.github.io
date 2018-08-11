@@ -62,6 +62,25 @@
       'job3';
 
     grid-template-columns: 1fr;
+
+    .jobheader {
+      img {
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        height: 60px;
+      }
+
+      h3 {
+        font-size: 125%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        text-align: left;
+      }
+    }
+
+    ul {
+      text-align: left;
+    }
   }
 
   .projects {
