@@ -1,15 +1,58 @@
 // Widescreens
 @include mediaXl {
   .projects {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: [col1] 1fr [col2] 1fr [col3] 1fr [col4] 1fr [col-end];
+    grid-template-rows: [row1] 1fr [row2] 1fr [row-end];
+    // column 1
+    .item1 {
+      grid-column-start: col1;
+      grid-column-end: col2;
+      grid-row-start: row1;
+      grid-row-end: row-end;
+    }
+
+    // row 1
+    .item2,
+    .item3,
+    .item4 {
+      grid-row-start: row1;
+      grid-row-end: row2;
+    }
+
+    // row 2
+    .item5,
+    .item6,
+    .item7 {
+      grid-row-start: row2;
+      grid-row-end: row-end;
+    }
+
+    // column 2
+    .item2,
+    .item5 {
+      grid-column-start: col2;
+      grid-column-end: col3;
+    }
+
+    // column 3
+    .item3,
+    .item6 {
+      grid-column-start: col3;
+      grid-column-end: col4;
+    }
+
+    // column 4
+    .item4,
+    .item7 {
+      grid-column-start: col4;
+      grid-column-end: col-end;
+    }
   }
 }
 
 // Desktops & Laptops
 @include mediaLg {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  // default
 }
 
 // Tablets & Small Laptops
@@ -84,7 +127,51 @@
   }
 
   .projects {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: [col1] 1fr [col2] 1fr [col-end];
+    grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [row4] 1fr[row-end];
+
+    // column 1
+    .item1,
+    .item4,
+    .item6 {
+      grid-column-start: col1;
+      grid-column-end: col2;
+    }
+
+    // column 2
+    .item2,
+    .item3,
+    .item5,
+    .item7 {
+      grid-column-start: col2;
+      grid-column-end: col-end;
+    }
+
+    // row 1
+    .item2 {
+      grid-row-start: row1;
+      grid-row-end: row2;
+    }
+
+    // row 2
+    .item3 {
+      grid-row-start: row2;
+      grid-row-end: row3;
+    }
+
+    // row 3
+    .item4,
+    .item5 {
+      grid-row-start: row3;
+      grid-row-end: row4;
+    }
+
+    // row 4
+    .item6,
+    .item7 {
+      grid-row-start: row4;
+      grid-row-end: row-end;
+    }
   }
 
   .boxes div {
@@ -114,6 +201,19 @@
 
   .projects {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    .item1,
+    .item2,
+    .item3,
+    .item4,
+    .item5,
+    .item6,
+    .item7 {
+      grid-column-start: auto;
+      grid-column-end: auto;
+      grid-row-start: auto;
+      grid-row-end: auto;
+    }
   }
 
   .boxes div {

@@ -133,7 +133,8 @@ main {
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: [col1] 1fr [col2] 1fr [col3] 1fr [col-end];
+  grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [row-end];
 
   img {
     width: 100%;
@@ -144,6 +145,65 @@ main {
       border-color: $secondary-color;
       @include easeOut;
     }
+  }
+
+  .item1,
+  .item2,
+  .item3,
+  .item4,
+  .item5,
+  .item6,
+  .item7 {
+    align-self: center;
+    vertical-align: middle;
+  }
+
+  .item1 {
+    grid-row-start: row1;
+    grid-row-end: row3;
+  }
+
+  // row 1
+  .item2,
+  .item3 {
+    grid-row-start: row1;
+    grid-row-end: row2;
+  }
+
+  // row 2
+  .item4,
+  .item5 {
+    grid-row-start: row2;
+    grid-row-end: row3;
+  }
+
+  // row 3
+  .item6,
+  .item7 {
+    grid-row-start: row3;
+    grid-row-end: row-end;
+  }
+
+  // column 1
+  .item1,
+  .item6 {
+    grid-column-start: col1;
+    grid-column-end: col2;
+  }
+
+  // column 2
+  .item2,
+  .item4,
+  .item7 {
+    grid-column-start: col2;
+    grid-column-end: col3;
+  }
+
+  // column 3
+  .item3,
+  .item5 {
+    grid-column-start: col3;
+    grid-column-end: col-end;
   }
 }
 
