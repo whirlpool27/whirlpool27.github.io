@@ -1,51 +1,41 @@
 // Widescreens
 @include mediaXl {
+  // default
   .projects {
-    grid-template-columns: [col1] 1fr [col2] 1fr [col3] 1fr [col4] 1fr [col-end];
-    grid-template-rows: [row1] 1fr [row2] 1fr [row-end];
-    // column 1
-    .item1 {
-      grid-column-start: col1;
-      grid-column-end: col2;
-      grid-row-start: row1;
-      grid-row-end: row-end;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'a b c d'
+      'a e f g';
+    .item.item1 {
+      grid-area: a;
     }
-
-    // row 1
-    .item2,
-    .item3,
-    .item4 {
-      grid-row-start: row1;
-      grid-row-end: row2;
+    .item.item2 {
+      grid-area: b;
     }
-
-    // row 2
-    .item5,
-    .item6,
-    .item7 {
-      grid-row-start: row2;
-      grid-row-end: row-end;
+    .item.item3 {
+      grid-area: c;
     }
-
-    // column 2
-    .item2,
-    .item5 {
-      grid-column-start: col2;
-      grid-column-end: col3;
+    .item.item4 {
+      grid-area: d;
     }
-
-    // column 3
-    .item3,
-    .item6 {
-      grid-column-start: col3;
-      grid-column-end: col4;
+    .item.item5 {
+      grid-area: e;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
-
-    // column 4
-    .item4,
-    .item7 {
-      grid-column-start: col4;
-      grid-column-end: col-end;
+    .item.item6 {
+      grid-area: f;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .item.item7 {
+      grid-area: g;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
   }
 }
@@ -53,6 +43,42 @@
 // Desktops & Laptops
 @include mediaLg {
   // default
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'a b c'
+      'a d e'
+      'f g .';
+
+    .item.item1 {
+      grid-area: a;
+    }
+    .item.item2 {
+      grid-area: b;
+    }
+    .item.item3 {
+      grid-area: c;
+    }
+    .item.item4 {
+      grid-area: d;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .item.item5 {
+      grid-area: e;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .item.item6 {
+      grid-area: f;
+    }
+    .item.item7 {
+      grid-area: g;
+    }
+  }
 }
 
 // Tablets & Small Laptops
@@ -127,50 +153,37 @@
   }
 
   .projects {
-    grid-template-columns: [col1] 1fr [col2] 1fr [col-end];
-    grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [row4] 1fr[row-end];
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'a b'
+      'a c'
+      'd e'
+      'f g';
 
-    // column 1
-    .item1,
-    .item4,
-    .item6 {
-      grid-column-start: col1;
-      grid-column-end: col2;
+    .item.item1 {
+      grid-area: a;
     }
-
-    // column 2
-    .item2,
-    .item3,
-    .item5,
-    .item7 {
-      grid-column-start: col2;
-      grid-column-end: col-end;
+    .item.item2 {
+      grid-area: b;
     }
-
-    // row 1
-    .item2 {
-      grid-row-start: row1;
-      grid-row-end: row2;
+    .item.item3 {
+      grid-area: c;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
-
-    // row 2
-    .item3 {
-      grid-row-start: row2;
-      grid-row-end: row3;
+    .item.item4 {
+      grid-area: d;
     }
-
-    // row 3
-    .item4,
-    .item5 {
-      grid-row-start: row3;
-      grid-row-end: row4;
+    .item.item5 {
+      grid-area: e;
     }
-
-    // row 4
-    .item6,
-    .item7 {
-      grid-row-start: row4;
-      grid-row-end: row-end;
+    .item.item6 {
+      grid-area: f;
+    }
+    .item.item7 {
+      grid-area: g;
     }
   }
 
@@ -200,20 +213,7 @@
   }
 
   .projects {
-    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    .item1,
-    .item2,
-    .item3,
-    .item4,
-    .item5,
-    .item6,
-    .item7 {
-      grid-column-start: auto;
-      grid-column-end: auto;
-      grid-row-start: auto;
-      grid-row-end: auto;
-    }
   }
 
   .boxes div {

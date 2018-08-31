@@ -194,53 +194,13 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: [col1] 1fr [col2] 1fr [col3] 1fr [col-end];
-  grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [row-end]; }
+  grid-gap: 0.7rem; }
   .projects img {
-    width: 100%;
-    border: 3px #fff solid; }
+    max-width: 100%; }
     .projects img:hover {
       opacity: 0.5;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
-  .projects .item1,
-  .projects .item2,
-  .projects .item3,
-  .projects .item4,
-  .projects .item5,
-  .projects .item6,
-  .projects .item7 {
-    align-self: center;
-    vertical-align: middle; }
-  .projects .item1 {
-    grid-row-start: row1;
-    grid-row-end: row3; }
-  .projects .item2,
-  .projects .item3 {
-    grid-row-start: row1;
-    grid-row-end: row2; }
-  .projects .item4,
-  .projects .item5 {
-    grid-row-start: row2;
-    grid-row-end: row3; }
-  .projects .item6,
-  .projects .item7 {
-    grid-row-start: row3;
-    grid-row-end: row-end; }
-  .projects .item1,
-  .projects .item6 {
-    grid-column-start: col1;
-    grid-column-end: col2; }
-  .projects .item2,
-  .projects .item4,
-  .projects .item7 {
-    grid-column-start: col2;
-    grid-column-end: col3; }
-  .projects .item3,
-  .projects .item5 {
-    grid-column-start: col3;
-    grid-column-end: col-end; }
 
 .boxes {
   display: flex;
@@ -285,39 +245,62 @@ main {
   color: #fff;
   height: 60px; }
 
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1201px) {
   .projects {
-    grid-template-columns: [col1] 1fr [col2] 1fr [col3] 1fr [col4] 1fr [col-end];
-    grid-template-rows: [row1] 1fr [row2] 1fr [row-end]; }
-    .projects .item1 {
-      grid-column-start: col1;
-      grid-column-end: col2;
-      grid-row-start: row1;
-      grid-row-end: row-end; }
-    .projects .item2,
-    .projects .item3,
-    .projects .item4 {
-      grid-row-start: row1;
-      grid-row-end: row2; }
-    .projects .item5,
-    .projects .item6,
-    .projects .item7 {
-      grid-row-start: row2;
-      grid-row-end: row-end; }
-    .projects .item2,
-    .projects .item5 {
-      grid-column-start: col2;
-      grid-column-end: col3; }
-    .projects .item3,
-    .projects .item6 {
-      grid-column-start: col3;
-      grid-column-end: col4; }
-    .projects .item4,
-    .projects .item7 {
-      grid-column-start: col4;
-      grid-column-end: col-end; } }
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 'a b c d' 'a e f g'; }
+    .projects .item.item1 {
+      grid-area: a; }
+    .projects .item.item2 {
+      grid-area: b; }
+    .projects .item.item3 {
+      grid-area: c; }
+    .projects .item.item4 {
+      grid-area: d; }
+    .projects .item.item5 {
+      grid-area: e;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; }
+    .projects .item.item6 {
+      grid-area: f;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; }
+    .projects .item.item7 {
+      grid-area: g;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 'a b c' 'a d e' 'f g .'; }
+    .projects .item.item1 {
+      grid-area: a; }
+    .projects .item.item2 {
+      grid-area: b; }
+    .projects .item.item3 {
+      grid-area: c; }
+    .projects .item.item4 {
+      grid-area: d;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; }
+    .projects .item.item5 {
+      grid-area: e;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; }
+    .projects .item.item6 {
+      grid-area: f; }
+    .projects .item.item7 {
+      grid-area: g; } }
+
+@media screen and (min-width: 652px) and (max-width: 900px) {
   main {
     align-items: center;
     text-align: center; }
@@ -359,33 +342,26 @@ main {
     .about-info ul {
       text-align: left; }
   .projects {
-    grid-template-columns: [col1] 1fr [col2] 1fr [col-end];
-    grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [row4] 1fr [row-end]; }
-    .projects .item1,
-    .projects .item4,
-    .projects .item6 {
-      grid-column-start: col1;
-      grid-column-end: col2; }
-    .projects .item2,
-    .projects .item3,
-    .projects .item5,
-    .projects .item7 {
-      grid-column-start: col2;
-      grid-column-end: col-end; }
-    .projects .item2 {
-      grid-row-start: row1;
-      grid-row-end: row2; }
-    .projects .item3 {
-      grid-row-start: row2;
-      grid-row-end: row3; }
-    .projects .item4,
-    .projects .item5 {
-      grid-row-start: row3;
-      grid-row-end: row4; }
-    .projects .item6,
-    .projects .item7 {
-      grid-row-start: row4;
-      grid-row-end: row-end; }
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 'a b' 'a c' 'd e' 'f g'; }
+    .projects .item.item1 {
+      grid-area: a; }
+    .projects .item.item2 {
+      grid-area: b; }
+    .projects .item.item3 {
+      grid-area: c;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; }
+    .projects .item.item4 {
+      grid-area: d; }
+    .projects .item.item5 {
+      grid-area: e; }
+    .projects .item.item6 {
+      grid-area: f; }
+    .projects .item.item7 {
+      grid-area: g; }
   .boxes div {
     font-size: 1.5rem;
     padding: 1.25rem 2.25rem;
@@ -393,7 +369,7 @@ main {
     .boxes div:hover {
       padding: 0.4rem 1.25rem; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 651px) {
   main {
     padding: 2rem; }
     main #home h1 {
@@ -402,19 +378,7 @@ main {
       margin-top: 1rem;
       font-size: 3rem; }
   .projects {
-    grid-template-columns: 1fr;
     grid-template-rows: auto; }
-    .projects .item1,
-    .projects .item2,
-    .projects .item3,
-    .projects .item4,
-    .projects .item5,
-    .projects .item6,
-    .projects .item7 {
-      grid-column-start: auto;
-      grid-column-end: auto;
-      grid-row-start: auto;
-      grid-row-end: auto; }
   .boxes div {
     font-size: 1rem;
     padding: 1rem 2rem;
