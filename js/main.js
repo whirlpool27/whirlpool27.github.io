@@ -1,33 +1,50 @@
 // Select DOM Items
 const menuBtn = document.querySelector('.menu-btn');
-const menu = document.querySelector('.menu');
-const menuNav = document.querySelector('.menu-nav');
-const menuBranding = document.querySelector('.menu-branding');
-const navItems = document.querySelectorAll('.nav-item');
+const sideNav = document.querySelector('.side-nav');
+const main = document.getElementById('home');
 
 // Set Initial State Of Menu
-let showMenu = false;
+var menuVisibility = false;
 
 menuBtn.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
-  if (!showMenu) {
-    menuBtn.classList.add('close');
-    menu.classList.add('show');
-    menuNav.classList.add('show');
-    menuBranding.classList.add('show');
-    navItems.forEach(item => item.classList.add('show'));
-
-    // Set Menu State
-    showMenu = true;
+  // open nav
+  if (menuVisibility == false) {
+    showMenu();
   } else {
-    menuBtn.classList.remove('close');
-    menu.classList.remove('show');
-    menuNav.classList.remove('show');
-    menuBranding.classList.remove('show');
-    navItems.forEach(item => item.classList.remove('show'));
-
-    // Set Menu State
-    showMenu = false;
+    hideMenu();
   }
+}
+
+function openHome() {
+  main.style.display = 'block';
+  hideMenu();
+}
+
+function openAbout() {
+  hideContent(main);
+  hideMenu();
+}
+
+function hideContent(id) {
+  id.style.display = 'none';
+}
+
+function showMenu() {
+  menuBtn.classList.add('close');
+  sideNav.style.width = '20%';
+  main.style.marginLeft = '20%';
+
+  // Set Menu State
+  menuVisibility = true;
+}
+
+function hideMenu() {
+  menuBtn.classList.remove('close');
+  sideNav.style.width = '0';
+  main.style.marginLeft = '0';
+
+  // Set Menu State
+  menuVisibility = false;
 }
