@@ -17,6 +17,9 @@ var menuVisibility = false;
 // contact = 3
 var currentContent = 0;
 
+var mediaMd = window.matchMedia('(min-width: 652px) and (max-width: 900px)');
+var mediaSm = window.matchMedia('(max-width: 651px)');
+
 menuBtn.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
@@ -62,18 +65,27 @@ function displayContent(id) {
 
 function showMenu() {
   menuBtn.classList.add('close');
-  sideNav.style.width = '20%';
-  switch (currentContent) {
-    case 0:
-      home.style.marginLeft = '20%';
-    case 1:
-      about.style.marginLeft = '20%';
-    case 2:
-      work.style.marginLeft = '20%';
-    case 3:
-      contact.style.marginLeft = '20%';
+  var w;
+  if (mediaSm.matches) {
+    w = '100%';
+  } else if (mediaMd.matches) {
+    w = '30%';
+  } else {
+    // media large and extra large
+    w = '20%';
   }
 
+  sideNav.style.width = w;
+  switch (currentContent) {
+    case 0:
+      home.style.marginLeft = w;
+    case 1:
+      about.style.marginLeft = w;
+    case 2:
+      work.style.marginLeft = w;
+    case 3:
+      contact.style.marginLeft = w;
+  }
   // Set Menu State
   menuVisibility = true;
 }
