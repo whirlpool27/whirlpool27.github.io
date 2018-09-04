@@ -94,22 +94,6 @@
     }
   }
 
-  ul.menu-nav {
-    float: none;
-    width: 100%;
-    min-height: 0;
-
-    &.show {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  .menu-nav {
-    height: 100vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px;
-  }
-
   .about-info {
     grid-template-areas:
       'bioimage'

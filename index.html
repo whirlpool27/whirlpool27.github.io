@@ -19,46 +19,210 @@
             <div class="btn-line"></div>
             <div class="btn-line"></div>
         </div>
-
         <div class="side-nav">
-            <a href="#" class="nav-item current" onclick="openHome()">
+            <a href="#" class="nav-item" onclick="openNavLink(0)">
                 Home
             </a>
-            <a href="#" class="nav-item" onclick="openAbout()">
+            <a href="#" class="nav-item" onclick="openNavLink(1)">
                 About
             </a>
-            <a href="work.html" class="nav-item">
+            <a href="#" class="nav-item" onclick="openNavLink(2)">
                 My Work
             </a>
-            <a href="contact.html" class="nav-item">
+            <a href="#" class="nav-item" onclick="openNavLink(3)">
                 Reach Me
             </a>
         </div>
     </header>
 
-    <main id="home">
-        <h1 class="lg-heading">
-            Gilang
-            <span class="text-secondary">Anggara</span>
-        </h1>
-        <h2 class="sm-heading">
-            Electrical Engineer, Programmer, Web Developer, Designer, Teacher, and Learner
-        </h2>
-        <div class="icons">
-            <a href="https://twitter.com/whirlpool27">
-                <i class="fab fa-twitter fa-2x"></i>
-            </a>
-            <a href="https://www.facebook.com/whirlpool27">
-                <i class="fab fa-facebook fa-2x"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/gilang-anggara-f">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-            <a href="https://github.com/whirlpool27">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
+    <main>
+        <div class="home">
+            <h1 class="lg-heading">
+                Gilang
+                <span class="text-secondary">Anggara</span>
+            </h1>
+            <h2 class="sm-heading">
+                Electrical Engineer, Programmer, Web Developer, Designer, Teacher, and Learner
+            </h2>
+            <div class="icons">
+                <a href="https://twitter.com/whirlpool27">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="https://www.facebook.com/whirlpool27">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gilang-anggara-f">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/whirlpool27">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </div>
+        </div>
+        <div class="about">
+            <h1 class="lg-heading">
+                About
+                <span class="text-secondary">Me</span>
+            </h1>
+            <h2 class="sm-heading">
+                Let me tell you a few things...
+            </h2>
+            <div class="about-info">
+                <img src="img/portrait.jpg" alt="Gilang Anggara" class="bio-image">
+                <div class="bio">
+                    <h3 class="text-secondary">BIO</h3>
+                    <p>College graduate with Bachelor of Science in Electrical Engineering with 3 months experience in Android
+                        EDC payment system. A dedicated individual with ability to adapt and high spirits to learn.
+                    </p>
+                </div>
+                <div class="job job-1">
+                    <div class="jobheader">
+                        <img src="img/spots_logo.png" alt="Spots Logo">
+                        <h3>
+                            Software Engineering Internship
+                        </h3>
+                    </div>
+                    <h4>
+                        <i>Android EDC Project</i>
+                    </h4>
+                    <ul>
+                        <li>Developed the ISO8583 Message Builder with J8583 and JPOS</li>
+                        <li>Integrated EDC Card Reader and Printer to Mobile Apps</li>
+                        <li>Developed UI for 4 Main EDC Transactions (Transaction, Void, Reversal, Settlement</li>
+                    </ul>
+                </div>
+                <div class="job job-2">
+                    <div class="jobheader">
+                        <img src="img/mocoponic_logo.png" alt="Spots Logo">
+                        <h3>ITB Electrical Engineering Capstone Design</h3>
+                    </div>
+                    <h4>
+                        <i>Hydroponics Automation Project</i>
+                    </h4>
+                    <ul>
+                        <li>Developed pH, EC, and Temperature Control using Arduino</li>
+                        <li>Developed Notification Handler in Javascript using Firebase</li>
+                        <li>Developed Android Mobile Apps for Monitoring and Control</li>
+                        <li>Integrated Facebook ShareDialog SDK to Android Mobile Apps</li>
+                        <li>Created JSON Database for MoCoponic with Firebase Realtime Database</li>
+                        <li>Designed UI for MoCoponic Android Apps</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="work">
+            <h1 class="lg-heading">
+                My
+                <span class="text-secondary">Work</span>
+            </h1>
+            <h2 class="sm-heading">
+                Here are some of my work...
+            </h2>
+            <div class="projects">
+                <div class="item item1">
+                    <a href="#">
+                        <img src="img/android_edc.jpg" alt="Project">
+                    </a>
+                    <a href="project/android_edc.html" class="btn-light">
+                        <i class="fas fa-eye"></i> Android EDC
+                    </a>
+                    <a href="https://github.com/whirlpool27/android-edc" class="btn-dark">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </div>
+                <div class="item item2">
+                    <a href="#">
+                        <img src="img/mocoponic.png" alt="Project">
+                    </a>
+                    <a href="https://goo.gl/VQwiS9" class="btn-light">
+                        <i class="fas fa-eye"></i> MoCoponic
+                    </a>
+                    <a href="https://github.com/whirlpool27/mocoponic" class="btn-dark">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </div>
+                <div class="item item3">
+                    <a href="#">
+                        <img src="img/mocoponic.png" alt="Project">
+                    </a>
+                    <a href="project/parallel_programming.html" class="btn-light">
+                        <i class="fas fa-eye"></i> Parallel Programming
+                    </a>
+                    <a href="https://github.com/whirlpool27/parallel-programming-basics" class="btn-dark">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </div>
+                <div class="item item4">
+                    <a href="#">
+                        <img src="img/mocoponic.png" alt="Project">
+                    </a>
+                    <a href="project/python_web_app.html" class="btn-light">
+                        <i class="fas fa-eye"></i> Flask Article Website
+                    </a>
+                    <a href="https://github.com/whirlpool27/python-basic-articlesweb" class="btn-dark">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </div>
+                <div class="item item5">
+                    <a href="#">
+                        <img src="img/mocoponic.png" alt="Project">
+                    </a>
+                    <a href="project/heartbeat_counter.html" class="btn-light">
+                        <i class="fas fa-eye"></i> Arduino Heartbeat Counter
+                    </a>
+                    <a href="https://github.com/whirlpool27/arduino-heartbeat-counter" class="btn-dark">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </div>
+                <div class="item item6">
+                    <a href="#">
+                        <img src="img/mocoponic.png" alt="Project">
+                    </a>
+                    <a href="project/rs_wave_detection.html" class="btn-light">
+                        <i class="fas fa-eye"></i> Heart RS Wave Detection
+                    </a>
+                    <a href="https://github.com/whirlpool27/rs-wave-detection" class="btn-dark">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </div>
+                <div class="item item7">
+                    <a href="#">
+                        <img src="img/pychess.png" alt="Project">
+                    </a>
+                    <a href="project/pychess.html" class="btn-light">
+                        <i class="fas fa-eye"></i> Python Chess
+                    </a>
+                    <a href="https://github.com/whirlpool27/pychess" class="btn-dark">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <h1 class="lg-heading">
+                Contact
+                <span class="text-secondary">Me</span>
+            </h1>
+            <h2 class="sm-heading">
+                Feel free to have a talk!
+            </h2>
+            <div class="boxes">
+                <div>
+                    <span class="text-secondary">Email:</span>
+                    gilang.anggara.f@gmail.com
+                </div>
+                <div>
+                    <span class="text-secondary">Phone:</span>
+                    (+62) 898 4954 229
+                </div>
+                <div>
+                    <span class="text-secondary">Address:</span>
+                    Cisitu Lama, Dago, Coblong, Bandung, Jawa Barat 40135
+                </div>
+            </div>
         </div>
     </main>
+
 
     <script src="js/main.js"></script>
 </body>

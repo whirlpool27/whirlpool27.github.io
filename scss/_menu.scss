@@ -1,6 +1,3 @@
-#home {
-  @include easeOut;
-}
 // Menu Button
 .menu-btn {
   position: absolute;
@@ -50,18 +47,16 @@
   width: 0;
   position: fixed;
   z-index: 1;
+  top: 0;
+  left: 0;
   background: rgba(darken($primary-color, 5), 1);
   overflow-x: hidden;
   @include easeOut;
-
-  .current {
-    color: $secondary-color;
-  }
 }
 
 .nav-item {
-  position: relative;
   text-align: center;
+  white-space: nowrap;
   text-decoration: none;
   padding: 20px;
   font-size: 30px;
@@ -72,12 +67,5 @@
 
   &:hover {
     color: $secondary-color;
-  }
-}
-
-// Delay each nav item slide by 0.1s
-@for $x from 1 through 4 {
-  .nav-item:nth-child(#{$x}) {
-    transition-delay: $x * 0.1s;
   }
 }

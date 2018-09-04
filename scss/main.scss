@@ -67,11 +67,30 @@ main {
     }
   }
 
-  &#home {
+  .home {
     overflow: hidden;
     h1 {
       margin-top: 20vh;
     }
+    @include easeOut;
+  }
+
+  .about {
+    overflow: hidden;
+    height: 0;
+    @include easeOut;
+  }
+
+  .work {
+    overflow: hidden;
+    height: 0;
+    @include easeOut;
+  }
+
+  .contact {
+    overflow: hidden;
+    height: 0;
+    @include easeOut;
   }
 }
 
@@ -192,6 +211,8 @@ main {
   @extend .btn;
   background: lighten($primary-color, 50);
   color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #main-footer {
