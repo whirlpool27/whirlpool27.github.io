@@ -58,7 +58,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background1.jpg);
+    background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -132,7 +132,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bio bioimage' 'job1 job2';
+  grid-template-areas: 'bio bioimage' 'edu exp1';
   grid-template-columns: repeat(2, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -148,27 +148,24 @@ main {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5); }
-  .about-info .job-1 {
-    grid-area: job1; }
-  .about-info .job-2 {
-    grid-area: job2; }
-  .about-info .jobheader {
+  .about-info .edu-exp-item1 img,
+  .about-info .edu-exp-item2 img {
+    max-height: 150px;
+    max-width: 200px;
+    height: auto; }
+  .about-info .edu-exp-item1 div,
+  .about-info .edu-exp-item2 div {
+    margin: 20px; }
+  .about-info .edu-exp-item1 {
+    grid-area: edu;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly; }
-    .about-info .jobheader img {
-      margin-left: 3%;
-      margin-right: 3%;
-      height: 70px; }
-    .about-info .jobheader h3 {
-      font-size: 150%;
-      margin-left: 3%;
-      margin-right: 3%;
-      text-align: left; }
-  .about-info .job {
-    background: #515151;
-    padding: 0.5rem;
-    border-bottom: #43b5f5 5px solid; }
+    flex-direction: row;
+    align-items: center; }
+  .about-info .edu-exp-item2 {
+    grid-area: exp1;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
 
 .projects {
   display: grid;
@@ -290,13 +287,11 @@ main {
       margin-bottom: 1rem;
       font-size: 4rem; }
   .about-info {
-    grid-template-areas: 'bio' 'bioimage' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'edu' 'exp1';
     grid-template-columns: 1fr; }
-    .about-info h4 {
-      text-align: left;
-      margin-left: 20px; }
-    .about-info ul {
-      text-align: left; }
+    .about-info .edu-exp-item1,
+    .about-info .edu-exp-item2 {
+      text-align: right; }
   .projects {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -334,12 +329,11 @@ main {
       margin-bottom: 1rem;
       font-size: 3rem; }
   .about-info {
-    grid-template-areas: 'bio' 'bioimage' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'edu' 'exp1';
     grid-template-columns: 1fr; }
-    .about-info .bio-image {
-      height: 200px; }
-    .about-info ul {
-      text-align: left; }
+    .about-info .edu-exp-item1,
+    .about-info .edu-exp-item2 {
+      text-align: right; }
   .projects {
     grid-template-rows: auto; }
   .boxes div {

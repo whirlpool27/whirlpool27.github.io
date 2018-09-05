@@ -96,20 +96,16 @@
 
   .about-info {
     grid-template-areas:
-      'bio'
       'bioimage'
-      'job1'
-      'job2'
-      'job3';
+      'bio'
+      'edu'
+      'exp1';
 
     grid-template-columns: 1fr;
 
-    h4 {
-      text-align: left;
-      margin-left: 20px;
-    }
-    ul {
-      text-align: left;
+    .edu-exp-item1,
+    .edu-exp-item2 {
+      text-align: right;
     }
   }
 
@@ -174,20 +170,16 @@
 
   .about-info {
     grid-template-areas:
-      'bio'
       'bioimage'
-      'job1'
-      'job2'
-      'job3';
+      'bio'
+      'edu'
+      'exp1';
 
     grid-template-columns: 1fr;
 
-    .bio-image {
-      height: 200px;
-    }
-
-    ul {
-      text-align: left;
+    .edu-exp-item1,
+    .edu-exp-item2 {
+      text-align: right;
     }
   }
 
