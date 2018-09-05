@@ -27,6 +27,7 @@ h3 {
   }
 
   &.sm-heading {
+    display: inline-block;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
@@ -97,20 +98,26 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    'bioimage bio'
+    'bio bioimage'
     'job1 job2';
   grid-template-columns: repeat(2, 1fr);
 
   .bio-image {
     grid-area: bioimage;
     margin: auto;
+    width: 200px;
     border-radius: 50%;
     border: $secondary-color 3px solid;
   }
 
   .bio {
+    margin-top: 60px;
     grid-area: bio;
     font-size: 1.5rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
   }
 
   .job-1 {
@@ -151,6 +158,7 @@ main {
 .projects {
   display: grid;
   grid-gap: 0.7rem;
+  margin-top: 30px;
 
   img {
     max-width: 100%;
@@ -168,12 +176,12 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 4rem;
 
   div {
     font-size: 2rem;
     border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
+    padding: 1rem 2rem;
     margin-bottom: 3rem;
     @include easeOut;
 
