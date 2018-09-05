@@ -169,14 +169,17 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
   margin-top: 30px; }
   .projects img {
-    max-width: 100%; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #43b5f5;
-      transition: all 0.5s ease-out; }
+    width: 100%; }
+  .projects .project-item {
+    padding: 0;
+    margin: 0; }
+    .projects .project-item:hover {
+      opacity: 0.4;
+      transition: 0.5s; }
 
 .boxes {
   display: flex;
@@ -223,61 +226,6 @@ main {
   color: #fff;
   height: 60px; }
 
-@media screen and (min-width: 1201px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 'a b c d' 'a e f g'; }
-    .projects .item.item1 {
-      grid-area: a; }
-    .projects .item.item2 {
-      grid-area: b; }
-    .projects .item.item3 {
-      grid-area: c; }
-    .projects .item.item4 {
-      grid-area: d; }
-    .projects .item.item5 {
-      grid-area: e;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end; }
-    .projects .item.item6 {
-      grid-area: f;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end; }
-    .projects .item.item7 {
-      grid-area: g;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end; } }
-
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 'a b c' 'a d e' 'f g .'; }
-    .projects .item.item1 {
-      grid-area: a; }
-    .projects .item.item2 {
-      grid-area: b; }
-    .projects .item.item3 {
-      grid-area: c; }
-    .projects .item.item4 {
-      grid-area: d;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end; }
-    .projects .item.item5 {
-      grid-area: e;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end; }
-    .projects .item.item6 {
-      grid-area: f; }
-    .projects .item.item7 {
-      grid-area: g; } }
-
 @media screen and (min-width: 652px) and (max-width: 900px) {
   main {
     align-items: center;
@@ -292,27 +240,6 @@ main {
     .about-info .edu-exp-item1,
     .about-info .edu-exp-item2 {
       text-align: right; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 'a b' 'a c' 'd e' 'f g'; }
-    .projects .item.item1 {
-      grid-area: a; }
-    .projects .item.item2 {
-      grid-area: b; }
-    .projects .item.item3 {
-      grid-area: c;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end; }
-    .projects .item.item4 {
-      grid-area: d; }
-    .projects .item.item5 {
-      grid-area: e; }
-    .projects .item.item6 {
-      grid-area: f; }
-    .projects .item.item7 {
-      grid-area: g; }
   .boxes div {
     font-size: 1.5rem;
     padding: 1.25rem 2.25rem;
@@ -334,8 +261,6 @@ main {
     .about-info .edu-exp-item1,
     .about-info .edu-exp-item2 {
       text-align: right; }
-  .projects {
-    grid-template-rows: auto; }
   .boxes div {
     font-size: 1rem;
     padding: 1rem 2rem;

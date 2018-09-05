@@ -17,6 +17,7 @@ var menuVisibility = false;
 // contact = 3
 var currentContent = 0;
 
+// media size
 var mediaMd = window.matchMedia('(min-width: 652px) and (max-width: 900px)');
 var mediaSm = window.matchMedia('(max-width: 651px)');
 

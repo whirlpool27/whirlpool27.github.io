@@ -1,84 +1,11 @@
 // Widescreens
 @include mediaXl {
   // default
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      'a b c d'
-      'a e f g';
-    .item.item1 {
-      grid-area: a;
-    }
-    .item.item2 {
-      grid-area: b;
-    }
-    .item.item3 {
-      grid-area: c;
-    }
-    .item.item4 {
-      grid-area: d;
-    }
-    .item.item5 {
-      grid-area: e;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    .item.item6 {
-      grid-area: f;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    .item.item7 {
-      grid-area: g;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-  }
 }
 
 // Desktops & Laptops
 @include mediaLg {
   // default
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      'a b c'
-      'a d e'
-      'f g .';
-
-    .item.item1 {
-      grid-area: a;
-    }
-    .item.item2 {
-      grid-area: b;
-    }
-    .item.item3 {
-      grid-area: c;
-    }
-    .item.item4 {
-      grid-area: d;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    .item.item5 {
-      grid-area: e;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    .item.item6 {
-      grid-area: f;
-    }
-    .item.item7 {
-      grid-area: g;
-    }
-  }
 }
 
 // Tablets & Small Laptops
@@ -106,41 +33,6 @@
     .edu-exp-item1,
     .edu-exp-item2 {
       text-align: right;
-    }
-  }
-
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      'a b'
-      'a c'
-      'd e'
-      'f g';
-
-    .item.item1 {
-      grid-area: a;
-    }
-    .item.item2 {
-      grid-area: b;
-    }
-    .item.item3 {
-      grid-area: c;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    .item.item4 {
-      grid-area: d;
-    }
-    .item.item5 {
-      grid-area: e;
-    }
-    .item.item6 {
-      grid-area: f;
-    }
-    .item.item7 {
-      grid-area: g;
     }
   }
 
@@ -181,10 +73,6 @@
     .edu-exp-item2 {
       text-align: right;
     }
-  }
-
-  .projects {
-    grid-template-rows: auto;
   }
 
   .boxes div {
