@@ -13,6 +13,7 @@
   main {
     align-items: center;
     text-align: center;
+    padding: 2rem;
 
     .lg-heading {
       line-height: 1;
@@ -30,6 +31,9 @@
 
     grid-template-columns: 1fr;
 
+    .bio {
+      margin-top: 0;
+    }
     .edu-exp-item1,
     .edu-exp-item2 {
       text-align: right;
@@ -58,27 +62,38 @@
 @include mediaSm {
   main {
     text-align: center;
-    margin: 0;
+    padding: 1rem;
 
     .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
       font-size: 3rem;
     }
+    .sm-heading {
+      font-size: 1.5rem;
+    }
   }
 
   .about-info {
+    width: 100%;
+    grid-template-columns: 1fr;
+
     grid-template-areas:
       'bioimage'
       'bio'
       'edu'
       'exp1';
 
-    grid-template-columns: 1fr;
-
+    .bio-image {
+      max-width: 150px;
+    }
+    .bio {
+      margin-top: 0;
+    }
     .edu-exp-item1,
     .edu-exp-item2 {
-      text-align: right;
+      display: block;
+      text-align: middle;
     }
   }
 

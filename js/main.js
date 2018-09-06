@@ -18,8 +18,8 @@ var menuVisibility = false;
 var currentContent = 0;
 
 // media size
-var mediaMd = window.matchMedia('(min-width: 652px) and (max-width: 900px)');
-var mediaSm = window.matchMedia('(max-width: 651px)');
+var mediaMd = window.matchMedia('(min-width: 541px) and (max-width: 900px)');
+var mediaSm = window.matchMedia('(max-width: 540px)');
 
 menuBtn.addEventListener('click', toggleMenu);
 
@@ -111,7 +111,7 @@ function hideMenu() {
 
 var modal = document.getElementsByClassName('project-modal');
 var projectItem = document.getElementsByClassName('project-item');
-var span = document.getElementsByClassName('close');
+var span = document.getElementsByClassName('modal-close');
 
 projectItem[0].onclick = function() {
   modal[0].style.display = 'grid';

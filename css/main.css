@@ -202,7 +202,7 @@ main {
     animation-name: zoom;
     animation-duration: 0.5s; }
 
-.close {
+.modal-close {
   position: fixed;
   top: 0;
   right: 30px;
@@ -212,7 +212,7 @@ main {
   transition: 0.3s;
   animation-name: zoom;
   animation-duration: 0.6s; }
-  .close:hover, .close:focus {
+  .modal-close:hover, .modal-close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer; }
@@ -268,10 +268,11 @@ main {
   color: #fff;
   height: 60px; }
 
-@media screen and (min-width: 652px) and (max-width: 900px) {
+@media screen and (min-width: 541px) and (max-width: 900px) {
   main {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    padding: 2rem; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
@@ -279,6 +280,8 @@ main {
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'edu' 'exp1';
     grid-template-columns: 1fr; }
+    .about-info .bio {
+      margin-top: 0; }
     .about-info .edu-exp-item1,
     .about-info .edu-exp-item2 {
       text-align: right; }
@@ -293,20 +296,28 @@ main {
     .boxes div:hover {
       padding: 0.4rem 1.25rem; } }
 
-@media screen and (max-width: 651px) {
+@media screen and (max-width: 540px) {
   main {
     text-align: center;
-    margin: 0; }
+    padding: 1rem; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
       font-size: 3rem; }
+    main .sm-heading {
+      font-size: 1.5rem; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'edu' 'exp1';
-    grid-template-columns: 1fr; }
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'bioimage' 'bio' 'edu' 'exp1'; }
+    .about-info .bio-image {
+      max-width: 150px; }
+    .about-info .bio {
+      margin-top: 0; }
     .about-info .edu-exp-item1,
     .about-info .edu-exp-item2 {
-      text-align: right; }
+      display: block;
+      text-align: middle; }
   .projects {
     grid-template-columns: 1fr; }
   .project-modal {
