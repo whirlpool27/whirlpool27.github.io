@@ -36,6 +36,13 @@
     }
   }
 
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .project-modal {
+    grid-template-columns: 1fr;
+  }
+
   .boxes div {
     font-size: 1.5rem;
     padding: 1.25rem 2.25rem;
@@ -73,6 +80,14 @@
     .edu-exp-item2 {
       text-align: right;
     }
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .project-modal {
+    grid-template-columns: 1fr;
   }
 
   .boxes div {

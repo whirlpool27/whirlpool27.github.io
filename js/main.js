@@ -108,3 +108,35 @@ function hideMenu() {
   // Set Menu State
   menuVisibility = false;
 }
+
+var modal = document.getElementsByClassName('project-modal');
+var projectItem = document.getElementsByClassName('project-item');
+var span = document.getElementsByClassName('close');
+
+projectItem[0].onclick = function() {
+  modal[0].style.display = 'grid';
+};
+span[0].onclick = function() {
+  modal[0].style.display = 'none';
+};
+
+projectItem[1].onclick = function() {
+  modal[1].style.display = 'grid';
+};
+span[1].onclick = function() {
+  modal[1].style.display = 'none';
+};
+
+projectItem[2].onclick = function() {
+  modal[2].style.display = 'grid';
+};
+span[2].onclick = function() {
+  modal[2].style.display = 'none';
+};
+
+projectItem[3].onclick = function() {
+  modal[3].style.display = 'grid';
+};
+span[3].onclick = function() {
+  modal[3].style.display = 'none';
+};
