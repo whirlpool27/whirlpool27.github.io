@@ -10,10 +10,14 @@
 
 // Tablets & Small Laptops
 @include mediaMd {
+  .menu-btn {
+    right: 10px;
+    top: 20px;
+  }
   main {
     align-items: center;
     text-align: center;
-    padding: 2rem;
+    padding: 2.5rem;
 
     .lg-heading {
       line-height: 1;
@@ -60,9 +64,13 @@
 
 // Smartphones
 @include mediaSm {
+  .menu-btn {
+    right: 10px;
+    top: 20px;
+  }
   main {
     text-align: center;
-    padding: 1rem;
+    padding: 2.5rem;
 
     .lg-heading {
       line-height: 1;
@@ -70,7 +78,7 @@
       font-size: 3rem;
     }
     .sm-heading {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -89,11 +97,15 @@
     }
     .bio {
       margin-top: 0;
+      font-size: 1rem;
     }
     .edu-exp-item1,
     .edu-exp-item2 {
       display: block;
       text-align: middle;
+      img {
+        max-width: 150px;
+      }
     }
   }
 
@@ -106,12 +118,12 @@
   }
 
   .boxes div {
-    font-size: 1rem;
-    padding: 1rem 2rem;
+    font-size: 0.9rem;
     margin-bottom: 2rem;
+    padding: 0.25rem;
 
     &:hover {
-      padding: 0.25rem 1rem;
+      padding: 0.25rem 0.25rem;
     }
   }
 }

@@ -269,10 +269,13 @@ main {
   height: 60px; }
 
 @media screen and (min-width: 541px) and (max-width: 900px) {
+  .menu-btn {
+    right: 10px;
+    top: 20px; }
   main {
     align-items: center;
     text-align: center;
-    padding: 2rem; }
+    padding: 2.5rem; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
@@ -297,15 +300,18 @@ main {
       padding: 0.4rem 1.25rem; } }
 
 @media screen and (max-width: 540px) {
+  .menu-btn {
+    right: 10px;
+    top: 20px; }
   main {
     text-align: center;
-    padding: 1rem; }
+    padding: 2.5rem; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
       font-size: 3rem; }
     main .sm-heading {
-      font-size: 1.5rem; }
+      font-size: 1.2rem; }
   .about-info {
     width: 100%;
     grid-template-columns: 1fr;
@@ -313,18 +319,22 @@ main {
     .about-info .bio-image {
       max-width: 150px; }
     .about-info .bio {
-      margin-top: 0; }
+      margin-top: 0;
+      font-size: 1rem; }
     .about-info .edu-exp-item1,
     .about-info .edu-exp-item2 {
       display: block;
       text-align: middle; }
+      .about-info .edu-exp-item1 img,
+      .about-info .edu-exp-item2 img {
+        max-width: 150px; }
   .projects {
     grid-template-columns: 1fr; }
   .project-modal {
     grid-template-columns: 1fr; }
   .boxes div {
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    margin-bottom: 2rem; }
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    padding: 0.25rem; }
     .boxes div:hover {
-      padding: 0.25rem 1rem; } }
+      padding: 0.25rem 0.25rem; } }
